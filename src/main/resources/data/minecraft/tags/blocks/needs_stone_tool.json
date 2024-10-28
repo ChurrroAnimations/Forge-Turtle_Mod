@@ -1,8 +1,6 @@
 {
+  "replace": "false",
   "values": [
-    "turtlemod:turtle_scute_block",
-    "turtlemod:turtle_scute_brick",
-    "turtlemod:tortoise_scute_block",
-    "turtlemod:tortoise_scute_brick"
+
   ]
 }
