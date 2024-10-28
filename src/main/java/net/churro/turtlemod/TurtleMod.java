@@ -1,6 +1,12 @@
 package net.churro.turtlemod;
 
 import com.mojang.logging.LogUtils;
+import net.churro.turtlemod.item.ModCreativeModeTabs;
+import net.churro.turtlemod.item.ModItems;
+import net.minecraft.world.item.CreativeModeTab;
+import net.minecraft.world.item.CreativeModeTabs;
+import net.minecraft.world.item.ItemStack;
+import net.minecraft.world.item.Items;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -24,6 +30,10 @@ public class TurtleMod {
     public TurtleMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        // Stuff in da mod
+        ModCreativeModeTabs.register(modEventBus);
+        ModItems.register(modEventBus);
+
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
 
@@ -36,7 +46,11 @@ public class TurtleMod {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if(event.getTabKey() == CreativeModeTabs.FOOD_AND_DRINKS) {
+            event.getEntries().putAfter(new ItemStack(Items.POTATO), new ItemStack(ModItems.POTATOSQUARED.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(Items.BAKED_POTATO), new ItemStack(ModItems.BAKEDPOTATOSQUARED.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+            event.getEntries().putAfter(new ItemStack(Items.POISONOUS_POTATO), new ItemStack(ModItems.POISONOUSPOTATOSQUARED.get()), CreativeModeTab.TabVisibility.PARENT_AND_SEARCH_TABS);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
