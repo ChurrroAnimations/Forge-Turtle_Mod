@@ -2,6 +2,13 @@
   "item.turtlemod.potatosquared" : "Potato²",
   "item.turtlemod.baked_potatosquared" : "Baked Potato²",
   "item.turtlemod.poisonous_potatosquared" : "Poisonous Potato²",
+  "item.minecraft.scute" : "Turtle Scute",
+  "item.turtlemod.tortoise_scute" : "Tortoise Scute",
+
+  "block.turtlemod.tortoise_scute_block" : "Tortoise Scute Block",
+  "block.turtlemod.tortoise_scute_bricks" : "Tortoise Scute Bricks",
+  "block.turtlemod.turtle_scute_block" : "Turtle Scute Block",
+  "block.turtlemod.turtle_scute_bricks" : "Turtle Scute Bricks",
 
   "tutletab.turtley_awesome_tab" : "Turtley Awesome Tab"
 }

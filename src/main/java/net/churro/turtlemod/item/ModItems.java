@@ -24,6 +24,10 @@ public class ModItems {
             "poisonous_potatosquared",
             () -> new Item(new Item.Properties())
     );
+    public static final RegistryObject<Item> TORTOISESCUTE = ITEMS.register(
+            "tortoise_scute",
+            () -> new Item(new Item.Properties())
+    );
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);

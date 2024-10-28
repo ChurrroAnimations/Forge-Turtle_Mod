@@ -2,9 +2,9 @@ package net.churro.turtlemod.block;
 
 import net.churro.turtlemod.TurtleMod;
 import net.churro.turtlemod.item.ModItems;
-import net.minecraft.core.registries.Registries;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -19,10 +19,25 @@ public class ModBlocks {
     public static final DeferredRegister<Block> BLOCKS =
             DeferredRegister.create(ForgeRegistries.BLOCKS, TurtleMod.MOD_ID);
 
-    public static final RegistryObject<Block> SCUTEBLOCK =
+    public static final RegistryObject<Block> TORTOISESCUTEBLOCK =
             registerBlock(
-                    "scute_block",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.ANVIL))
+                    "tortoise_scute_block",
+                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
+            );
+    public static final RegistryObject<Block> TORTOISESCUTEBRICKS =
+            registerBlock(
+                    "tortoise_scute_bricks",
+                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
+            );
+    public static final RegistryObject<Block> TURTLESCUTEBLOCK =
+            registerBlock(
+                    "turtle_scute_block",
+                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
+            );
+    public static final RegistryObject<Block> TURTLESCUTEBRICKS =
+            registerBlock(
+                    "turtle_scute_bricks",
+                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
             );
 
 
@@ -38,8 +53,6 @@ public class ModBlocks {
                 () -> new BlockItem(block.get(), new Item.Properties())
         );
     }
-
-
 
     public static void register(IEventBus eventBus) {
         BLOCKS.register(eventBus);

@@ -1,6 +1,7 @@
 package net.churro.turtlemod.item;
 
 import net.churro.turtlemod.TurtleMod;
+import net.churro.turtlemod.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -29,6 +30,11 @@ public class ModCreativeModeTabs {
                                     (pParameters, pOutput) -> {
                                         // items in da creative inventory tab in da mod
                                         pOutput.accept(Items.SCUTE);
+                                        pOutput.accept(ModBlocks.TURTLESCUTEBLOCK.get());
+                                        pOutput.accept(ModBlocks.TURTLESCUTEBRICKS.get());
+                                        pOutput.accept(ModItems.TORTOISESCUTE.get());
+                                        pOutput.accept(ModBlocks.TORTOISESCUTEBLOCK.get());
+                                        pOutput.accept(ModBlocks.TORTOISESCUTEBRICKS.get());
                                     }
                             )
                             .build()

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:smoking",
+  "ingredient": {
+    "item": "turtlemod:potatosquared"
+  },
+  "result": "turtlemod:baked_potatosquared",
+  "experience": 1.2,
+  "cookingtime": 700
+}

@@ -1,6 +1,7 @@
 package net.churro.turtlemod;
 
 import com.mojang.logging.LogUtils;
+import net.churro.turtlemod.block.ModBlocks;
 import net.churro.turtlemod.item.ModCreativeModeTabs;
 import net.churro.turtlemod.item.ModItems;
 import net.minecraft.world.item.CreativeModeTab;
@@ -33,6 +34,7 @@ public class TurtleMod {
         // Stuff in da mod
         ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         modEventBus.addListener(this::commonSetup);
         MinecraftForge.EVENT_BUS.register(this);
