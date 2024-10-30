@@ -1,6 +1,7 @@
 package net.churro.turtlemod.block;
 
 import net.churro.turtlemod.TurtleMod;
+import net.churro.turtlemod.block.block_entites.owoBlock;
 import net.churro.turtlemod.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
@@ -22,22 +23,41 @@ public class ModBlocks {
     public static final RegistryObject<Block> TORTOISESCUTEBLOCK =
             registerBlock(
                     "tortoise_scute_block",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
+                    () -> new Block(BlockBehaviour.Properties
+                            .copy(Blocks.BONE_BLOCK)
+                            .requiresCorrectToolForDrops()
+                    )
             );
     public static final RegistryObject<Block> TORTOISESCUTEBRICKS =
             registerBlock(
                     "tortoise_scute_bricks",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
+                    () -> new Block(BlockBehaviour.Properties
+                            .copy(Blocks.BONE_BLOCK)
+                            .requiresCorrectToolForDrops()
+                    )
             );
     public static final RegistryObject<Block> TURTLESCUTEBLOCK =
             registerBlock(
                     "turtle_scute_block",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
+                    () -> new Block(BlockBehaviour.Properties
+                            .copy(Blocks.BONE_BLOCK)
+                            .requiresCorrectToolForDrops()
+                    )
             );
     public static final RegistryObject<Block> TURTLESCUTEBRICKS =
             registerBlock(
                     "turtle_scute_bricks",
-                    () -> new Block(BlockBehaviour.Properties.copy(Blocks.BONE_BLOCK).requiresCorrectToolForDrops())
+                    () -> new Block(BlockBehaviour.Properties
+                            .copy(Blocks.BONE_BLOCK)
+                            .requiresCorrectToolForDrops()
+                    )
+            );
+    public static final RegistryObject<Block> OWOFACEBLOCK =
+            registerBlock(
+                    "owo",
+                    () -> new owoBlock(BlockBehaviour.Properties
+                            .copy(Blocks.BONE_BLOCK)
+                            .requiresCorrectToolForDrops())
             );
 
 

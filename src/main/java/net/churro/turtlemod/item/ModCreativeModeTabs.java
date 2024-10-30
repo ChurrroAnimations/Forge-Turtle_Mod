@@ -35,6 +35,9 @@ public class ModCreativeModeTabs {
                                         pOutput.accept(ModItems.TORTOISESCUTE.get());
                                         pOutput.accept(ModBlocks.TORTOISESCUTEBLOCK.get());
                                         pOutput.accept(ModBlocks.TORTOISESCUTEBRICKS.get());
+                                        pOutput.accept(ModItems.STAFFDEOWO.get());
+                                        pOutput.accept(ModItems.RAWTURTMEAT.get());
+                                        pOutput.accept(ModItems.COOKEDTURTMEAT.get());
                                     }
                             )
                             .build()
